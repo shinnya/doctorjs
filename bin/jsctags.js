@@ -221,5 +221,6 @@ if (opts.hasOwnProperty('jsonp')) {
     tags.write(out);
 }
 
-out.end();
-
+if (out != process.stdout) {
+    out.end();
+}
